@@ -53,7 +53,7 @@ development:
   compile: true
 
   # Verifies that correct packages and versions are installed by inspecting package.json, yarn.lock, and node_modules
-  check_yarn_integrity: true
+  check_yarn_integrity: false
 
   # Reference: https://webpack.js.org/configuration/dev-server/
   dev_server:
@@ -93,4 +93,4 @@ production:
   extract_css: false
 
   # Cache manifest.json for performance
-  cache_manifest: true
+  cache_manifest: false
