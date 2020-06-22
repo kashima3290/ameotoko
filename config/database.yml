@@ -50,5 +50,5 @@ test:
 production:
   <<: *default
   database: ameotoko_production
-  username: ameotoko
-  password: <%= ENV['AMEOTOKO_DATABASE_PASSWORD'] %>
+  username: root
+  password:
