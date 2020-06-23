@@ -52,3 +52,4 @@ production:
   database: ameotoko_production
   username: root
   password:
+  socket: /var/lib/mysql/mysql.sock
