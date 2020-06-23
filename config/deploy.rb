@@ -1,5 +1,5 @@
 # capistranoのバージョン固定
-lock '3.4.0'
+lock '3.14.1'
 
 # デプロイするアプリケーション名
 set :application, 'ameotoko'
@@ -11,7 +11,7 @@ set :repo_url, 'git@github.com:kashima3290/ameotoko.git'
 set :branch, 'master'
 
 # deploy先のディレクトリ。
-set :deploy_to, '/var/www/ameotoko'
+set :deploy_to, '/var/www/rails/ameotoko'
 
 # シンボリックリンクをはるファイル。(※後述)
 set :linked_files, fetch(:linked_files, []).push('config/settings.yml')

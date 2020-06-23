@@ -2,4 +2,4 @@
 server '18.180.168.57', user: 'ec2-user', roles: %w{app db web}
 
 #デプロイするサーバーにsshログインする鍵の情報を記述
-set :ssh_options, keys: '~/.ssh/id_rsa'
+set :ssh_options, keys: '~/.ssh/ameotoko.pem'
