@@ -7,37 +7,69 @@
         fluid
       >
         <v-row>
-          <v-col class="text-center" cols="4">
+          <v-col cols="7">
+            <v-card class="ml-3">
+              <v-card-title class="mb-4">
+                <h2>このページは天気を通知するLINEボットサーバーです</h2>
+              </v-card-title>
+              <v-card-text class="black--text">
+                <h2 class="mb-1">・経緯</h2>
+                <p>wwwwwww</p>
+                <h2 class="mb-1">・使用言語、環境</h2>
+                <p>Ruby / Ruby on Rails / JavaScript / AWS / Vue.js（ページ作成）</p>
+              </v-card-text>
+            </v-card>
+          </v-col>
+          <v-col class="text-center" cols="2">
              <img src="../assets/images/default_icon.jpeg"
                   class="default_icon">
               <h1>雨男</h1>
           </v-col>
-          <v-col cols="4">
+          <v-col cols="3">
             <div class="balloon2-left">
               <p>ちなみに今日の大阪の天気は晴れだ<br>傘はいらんよ</p>
             </div>
-          </v-col>
-          <v-col cols="4">
-
+            <div class="balloon2-left">
+              <p>これからは曇りそうだわ</p>
+            </div>
           </v-col>
         </v-row>
         <template>
           <v-parallax
             height="300"
-            src="https://lh3.googleusercontent.com/pHmWBI58vUreJWPoq0KTLnydYmnoyXwUE0-RxR8gDKEr3ZHhH7qokDb0OI2YUh1WESkQEQQmBbEfDgWyj9yws519ncsp91HFjqDc8X5nOcEAeiPIFYdDEdBxwtM6T5eSWXv2g6jxVvsj0VlGhdoIaYLqr_d8Wy0zv43szMSs0_o-fuffnAUluAxqZBTQGwEQU12hSxbIy811-HVX5RiDITyXcn3w3IQyqotWUk_axGhk4kKgTHVvLRCD8qAEbHT8USXfdpEysq-NWj3dygaCk9KUNGCc-742RZLDY2pgQziffFz8qEDEmXtXzqyilsmi7zgWkXCLfzOlJOuVGkxJao5wXNtMwXcqKvlQD6N8lWSQyXbZFbDRqOHttBMKJSR_7ciiu6LIAJKp7H8L6ygVCMTNnNjVgRQHcutevLsnB8U6qiG3WCj7L3LHYDZ5CRcWt5kgNtxVDulCP5uI-zWZGr1d-wF19VczwGalOKJAubfc6nuTCKfLWtBtQ4AviqcPUQncd1yg07x0Rfktub4zZPlyN80fkztVyAyqqzslCUpieMLmbXgdX82km6DYQkSXfMWo1sKVEs1hy5eTJYRJjR_L8q9l3zD5ZZOtY-a7bCBGe5ECNhfG9TIzqh5M0PkXwlmVe1DtM9I1XhYMQ3V2OZ0HI65J9VfPrYUe9ZhFr1CgeuVh0c0bIfPGBWe5=w1920-h1280-no?authuser=0"
+            src="https://lh3.googleusercontent.com/_utdRJsQDHnfVvuqFWoZEbz0v6RKxVYrvneyFt-Atpfe1NpzAZJPlDnhqQVgnvV2JTMgutBmUb_DDF2oPk3IP8e8RaS-UzzTriGuYyCesd8ygPtEmAsFoVBL6OE3-MMuomeoRxPvveGGwHt5ql1Xr12Ob852ZMTSAGWa-JoIA9GnKjEuFYJHNR-cinAWXLLzbNJAah3KwyCYabEz6pDLL2YfEjZz8SHtdWPpV0v5E6W5MX1lTRM-EDMMlUaRtUlBYzDe-BVpBFyZVpR4zOfnT0hcTuVHcJFQ8nU-6lUqb9mfGRiEWP4AHKBFys58fJei25zhTeT5wiYz9HaozAh039wL1YfU2phx-Cmnq-qy-NSK8vC94Sast7RVAjKz4lOizYL-Fi1D2AYIWurp_xPx71p1bIj6QI6m8D_3Pfs8QnsQViqfQwyEKYkrkP9u7fcO3pAQNaOXpIRzqKXK9RCs_YEAybfFIqV29SQ9vnzfbUfC0v8GzohXcE2zVJ75Lw0lNs34BSJyXX9nTyydeJyXfsdyY4k3HmVGiDrbu7aaYaM0djPkNO-CarS9uHtVYX4yX4ICGOeYoua5XmJ6LKMVwX75ZVNArAlvPYE83RnXSzyrjVfue6Nn6ojTevPYW4Jv9WWdmyemiOP-TB8N-3mI0LX3EAFKnoaO6OqXW-5f5eibj2Q2JuT_6RJBKp9P=w1920-h1200-no?authuser=0"
           >
             <v-row
               align="center"
               justify="center"
             >
               <v-col class="text-center" cols="12">
-                <h1 class="mb-4">大阪</h1>
-                <h4 class="subheading">晴れ</h4>
+                <h1 class="mb-4 black--text">Versions</h1>
               </v-col>
             </v-row>
           </v-parallax>
         </template>
 
+        <template>
+          <v-timeline>
+            <v-timeline-item
+              v-for="n in 3"
+              :key="n"
+              color="red lighten-2"
+              large
+            >
+              <template v-slot:opposite>
+                <span>Tus eu perfecto</span>
+              </template>
+              <v-card class="elevation-2">
+                <v-card-title class="headline">Lorem ipsum</v-card-title>
+                <v-card-text>
+                  Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.
+                </v-card-text>
+              </v-card>
+            </v-timeline-item>
+          </v-timeline>
+        </template>
       </div>
     </v-main>
   </v-app>
