@@ -17,6 +17,15 @@
                 <p>wwwwwww</p>
                 <h2 class="mb-1">・使用言語、環境</h2>
                 <p>Ruby / Ruby on Rails / JavaScript / AWS / Vue.js（ページ作成）</p>
+                <v-row>
+                  <v-col>
+                    <h2 class="mb-1">・友達追加</h2>
+                    <p>LINE_ID： @793rgjbt</p>
+                  </v-col>
+                  <v-col>
+                    <img src='https://i.gyazo.com/c446bef9d803b76ba58dcc00bdb4202a.png'>
+                  </v-col>
+                </v-row>
               </v-card-text>
             </v-card>
           </v-col>
