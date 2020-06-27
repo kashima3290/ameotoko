@@ -24,6 +24,8 @@ LINE API と Open Weather Map API を使用し、雨が降る日に傘を忘れ�
 ## 🔔 LINE 友達追加
 * LINE ID：　@793rgjbt
 
+![QRコード](https://i.gyazo.com/c446bef9d803b76ba58dcc00bdb4202a.png)
+
 ## 🔔 アップデート情報
 > ### Version 1.0
 >> 友人の出勤時間に合わせて、毎朝定期的に天気情報を取得し、今後雨が降りそうなら通知してくれます。
