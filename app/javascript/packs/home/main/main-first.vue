@@ -7,18 +7,12 @@
         </v-card-title>
         <v-card-text class="black--text">
           <h2 class="mb-1">・経緯</h2>
-          <p>wwwwwww</p>
+          <p class="mb-7">　朝天気予報を見ることを忘れ、傘をよく忘れるという友人のために、彼の問題を解決するサービスを提供しようと考え、作成しました。彼が会社に出社する午前7時にOpen Weather Map APIから天気予報を取得し、傘を持っていくように通知できるようにしています。<br><br>　また、彼からのフィードバックをもらい、要望に答えながら、アップデートを重ねています。現在は平日以外の通知は不要との問題を解決しています。</p>
           <h2 class="mb-1">・使用言語、環境</h2>
-          <p>Ruby / Ruby on Rails / JavaScript / AWS / Vue.js（ページ作成）</p>
-          <v-row>
-            <v-col>
-              <h2 class="mb-1">・友達追加</h2>
-              <p>LINE_ID： @793rgjbt</p>
-            </v-col>
-            <v-col>
-              <img src='https://i.gyazo.com/c446bef9d803b76ba58dcc00bdb4202a.png'>
-            </v-col>
-          </v-row>
+          <p>Ruby / Ruby on Rails / JavaScript / AWS（EC2 / Route53） / Vue.js（ページ作成）</p>
+          <h2 class="mb-1">・Github</h2>
+          <h1></h1>
+          <a href='https://github.com/kashima3290/ameotoko'>ソースコードはこちらから</a>
         </v-card-text>
       </v-card>
     </v-col>
@@ -26,6 +20,7 @@
         <img src="../../../../assets/images/default_icon.jpeg"
             class="default_icon">
         <h1>雨男</h1>
+        <p class="mt-10">LINE_ID： @793rgjbt</p>
     </v-col>
     <v-col cols="3">
       <div class="balloon2-left">
@@ -34,6 +29,7 @@
       <div class="balloon2-left">
         <p>これからは曇りそうだわ</p>
       </div>
+      <img src='https://i.gyazo.com/c446bef9d803b76ba58dcc00bdb4202a.png'>
     </v-col>
   </v-row>
 </template>
