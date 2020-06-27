@@ -1,20 +1,40 @@
 <template>
   <v-timeline>
     <v-timeline-item
-      v-for="n in 3"
-      :key="n"
-      color="red lighten-2"
+      color="blue"
       large
     >
-      <template v-slot:opposite>
-        <span>Tus eu perfecto</span>
-      </template>
       <v-card class="elevation-2">
-        <v-card-title class="headline">Lorem ipsum</v-card-title>
+        <v-card-title class="headline">Ver 1.0</v-card-title>
         <v-card-text>
-          Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.
+          友人の出勤時間に合わせて、毎朝定期的に天気情報を取得し、今後雨が降りそうなら通知してくれます。
         </v-card-text>
       </v-card>
     </v-timeline-item>
+
+    <v-timeline-item
+      color="blue"
+      large
+    >
+      <v-card class="elevation-2">
+        <v-card-title class="headline">Ver 2.0</v-card-title>
+        <v-card-text>
+          休日の通知は不要との要望を受け、平日のみの通知に変更
+        </v-card-text>
+      </v-card>
+    </v-timeline-item>
+
+    <v-timeline-item
+      color="blue"
+      large
+    >
+      <v-card class="elevation-2">
+        <v-card-title class="headline">Ver 3.0</v-card-title>
+        <v-card-text>
+          comming soon...
+        </v-card-text>
+      </v-card>
+    </v-timeline-item>
+
   </v-timeline>
 </template>
