@@ -1,24 +1,36 @@
-# README
+LINE API 天気予報通知ボット☂️
+====
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+LINE API と Open Weather Map API を使用し、雨が降る日に傘を忘れないようにするボットを作成しました。
 
-Things you may want to cover:
+## 🔔 概要
+　朝に天気予報を見ることを忘れ、傘をよく忘れるという悩みを抱える友人のために、彼の問題を解決するサービスを提供しようと考え、作成しました。
+彼が会社に出社する午前7時にOpen Weather Map APIから天気予報を取得し、傘を持っていくように通知できるようにしています。<br><br>　また、彼からのフィードバックをもらい、要望に答えながら、アップデートを重ねています。現在は平日以外の通知は不要との問題を解決しています。
 
-* Ruby version
 
-* System dependencies
+## 🔔 使用技術
+* Ruby (2.6.0)<br><br>
+* Ruby on Rails (6.0.3)<br><br>
+* JavaScript<br><br>
+* MySQL (8.0.19)<br><br>
+* Vue.js (2.6.11) ※紹介ページ<br><br>
+* AWS (EC2・Route53)<br><br>
 
-* Configuration
+## 🔔 機能
+* 毎朝定期的に通知を促してくれます。
 
-* Database creation
+## 🔔 ボットサーバーURL（アプリ紹介ページ）
 
-* Database initialization
+## 🔔 LINE 友達追加
+* LINE ID：　@793rgjbt
 
-* How to run the test suite
+## 🔔 アップデート情報
+> ### Version 1.0
+>> 友人の出勤時間に合わせて、毎朝定期的に天気情報を取得し、今後雨が降りそうなら通知してくれます。
+> ### Version 2.0
+>> comming soon...
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
 
-* ...
+
+
