@@ -19,6 +19,14 @@
     props: {
       source: String,
     },
+    data() {
+      return {
+      }
+    },
+    created(){
+    },
+    methods: function(){
+    },
     components: {
       BotHeader,
       MainFirst,
