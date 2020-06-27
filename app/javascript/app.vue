@@ -11,9 +11,10 @@
 
 <script>
   import BotHeader from './packs/home/bot-header';
-  import MainFirst from './packs/home/main/main-first'
-  import MainSecond from './packs/home/main/main-second'
-  import MainThird from './packs/home/main/main-third'
+  import MainFirst from './packs/home/main/main-first';
+  import MainSecond from './packs/home/main/main-second';
+  import MainThird from './packs/home/main/main-third';
+  import axios from 'axios';
   export default {
     props: {
       source: String,
