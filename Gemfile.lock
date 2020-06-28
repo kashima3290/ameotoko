@@ -109,7 +109,6 @@ GEM
       concurrent-ruby (~> 1.0)
     jbuilder (2.10.0)
       activesupport (>= 5.0.0)
-    json (1.8.6)
     kgio (2.11.3)
     line-bot-api (1.14.1)
     listen (3.2.1)
@@ -136,8 +135,6 @@ GEM
     nio4r (2.5.2)
     nokogiri (1.10.9)
       mini_portile2 (~> 2.4.0)
-    open-weather (0.12.0)
-      json (~> 1)
     public_suffix (4.0.5)
     puma (4.3.5)
       nio4r (~> 2.0)
@@ -258,7 +255,6 @@ DEPENDENCIES
   line-bot-api
   listen (~> 3.2)
   mysql2 (>= 0.4.4)
-  open-weather
   puma (~> 4.1)
   rails (~> 6.0.3, >= 6.0.3.2)
   sass-rails (>= 6)
