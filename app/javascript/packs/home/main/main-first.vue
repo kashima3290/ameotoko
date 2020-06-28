@@ -24,7 +24,7 @@
     </v-col>
     <v-col cols="3">
       <div class="balloon2-left">
-        <p>今の大阪の天気は{{ now_weather }}<br>{{ this.message }}</p>
+        <p>今の大阪の天気は{{ now_weather }}{{ cloudy }}<br>{{ this.message }}</p>
       </div>
       <img src='https://i.gyazo.com/c446bef9d803b76ba58dcc00bdb4202a.png'>
     </v-col>
@@ -37,6 +37,7 @@ export default {
       return {
         now_weather: null,
         message: null,
+        cloudy: null
       }
     },
     props: {
@@ -48,10 +49,11 @@ export default {
     methods: {
       todayWeather() {
         console.log(gon.now_weather)
-        console.log(gon.today_forecast)
         this.now_weather = gon.now_weather
         if (gon.now_weather.match(/雨/)) {
           this.message = "傘持っていけよ"
+        } else if (gon.now_weather.match(/雲/)) {
+          this.cloudy = "が広がってるよ"
         } else {
           this.message = "傘はいらないよ"
         }
