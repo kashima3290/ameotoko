@@ -16,21 +16,16 @@
   import MainThird from './packs/home/main/main-third';
   import axios from 'axios';
   export default {
-    props: {
-      source: String,
-    },
     data() {
       return {
       }
     },
+    props: {
+      source: String,
+    },
     created(){
-      this.todayWeather();
     },
     methods: {
-      todayWeather() {
-        console.log(gon.now_weather)
-        console.log(gon.today_forecast)
-      }
     },
     components: {
       BotHeader,
