@@ -1,21 +1,24 @@
 class BotsController < ApplicationController
   require 'line/bot'
-  require 'json'
-  require 'open_weather'
+  require "open-uri"
   protect_from_forgery :except => [:callback]
 
   def index
-    # OWM API取得
-    options = { units: "metric", APPID: ENV['OPEN_WETHER_MAP_API'] }
-    options[:lang] = "ja"
-    # 今日の12時までの天気予報を3時間ごとに取得
-    options[:cnt] = 6
     # jsonの多元次ハッシュから天気だけ取得し変数now_weatherに代入
-    now_weather = OpenWeather::Current.city("Osaka-shi", options)["weather"][0]["description"]
     today_forecast = []
-    OpenWeather::Forecast.city("Osaka-shi", options)["list"].each do |f|
-      today_forecast << f["weather"][0]["description"]
+
+    # 現在天気
+    now_weather_response = open("https://api.openweathermap.org/data/2.5/weather?q=Osaka-shi,jp&units=metric&lang=ja&APPID=#{ENV['OPEN_WETHER_MAP_API']}")
+    now_weather = JSON.parse(now_weather_response.read)["weather"][0]["description"]
+
+    # 天気予報
+    today_forecast_response = open("http://api.openweathermap.org/data/2.5/forecast?q=Osaka-shi,jp&units=metric&lang=ja&APPID=#{ENV['OPEN_WETHER_MAP_API']}")
+    JSON.parse(today_forecast_response.read)["list"].each do |list|
+      unixtime = list["dt"]
+      time = Time.at(unixtime) # 日本時間に変更
+      hour = time.strftime("%H時") # 〜時で取得
     end
+
     gon.now_weather = now_weather
     gon.today_forecast = today_forecast
   end
