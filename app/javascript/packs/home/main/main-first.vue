@@ -48,7 +48,6 @@ export default {
     },
     methods: {
       todayWeather() {
-        console.log(gon.now_weather)
         this.now_weather = gon.now_weather
         if (gon.now_weather.match(/雨/)) {
           this.message = "傘持っていけよ"
