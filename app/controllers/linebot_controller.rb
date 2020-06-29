@@ -3,7 +3,6 @@ class LinebotController < ApplicationController
   require 'json'
   protect_from_forgery :except => [:callback]
 
-  # クライアント認証
   def client
     @client ||= Line::Bot::Client.new { |config|
       config.channel_secret = ENV["LINE_CHANNEL_SECRET"]
@@ -11,13 +10,14 @@ class LinebotController < ApplicationController
     }
   end
 
-  # サーバー返答アクション
   def callback
     body = request.body.read
+
     signature = request.env['HTTP_X_LINE_SIGNATURE']
     unless client.validate_signature(body, signature)
-      error 400 do 'Bad Request' end
+      halt 400, {'Content-Type' => 'text/plain'}, 'Bad Request'
     end
+
     events = client.parse_events_from(body)
 
     events.each do |event|
@@ -29,11 +29,8 @@ class LinebotController < ApplicationController
             type: 'text',
             text: event.message['text']
           }
+          client.reply_message(event['replyToken'], message)
         end
       end
-      client.reply_message(event['replyToken'], message)
     end
-    head :ok
   end
-
-end
