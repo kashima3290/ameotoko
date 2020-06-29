@@ -9,7 +9,8 @@ class BotsController < ApplicationController
     # now_weather_uri = URI.parse("http://api.openweathermap.org/data/2.5/weather?q=Osaka-shi,jp&units=metric&lang=ja&APPID=#{ENV['OPEN_WETHER_MAP_API']}")
     # now_weather_response = Net::HTTP.get_response(now_weather_uri)
     # json = JSON.parse(now_weather_response.body)
-    now_weather = json["weather"][0]["description"]
+    # now_weather = json["weather"][0]["description"]
+    now_weather = "晴れ"
 
     # 天気予報
     # forecasts = []
