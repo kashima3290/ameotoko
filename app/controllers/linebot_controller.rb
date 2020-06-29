@@ -27,7 +27,7 @@ class LinebotController < ApplicationController
     }
     head :ok
   end
-  
+
   private
   # クライアント認証
   def client
