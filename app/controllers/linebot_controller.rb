@@ -1,15 +1,7 @@
 class LinebotController < ApplicationController
   require 'line/bot'
   require 'json'
-  protect_from_forgery :except => [:callback]
-
-  # クライアント認証
-  def client
-    @client ||= Line::Bot::Client.new { |config|
-      config.channel_secret = ENV["LINE_CHANNEL_SECRET"]
-      config.channel_token = ENV["LINE_CHANNEL_TOKEN"]
-    }
-  end
+  protect_from_forgery except: :callback
 
   # サーバー返答アクション
   def callback
@@ -34,6 +26,15 @@ class LinebotController < ApplicationController
       end
     }
     head :ok
+  end
+  
+  private
+  # クライアント認証
+  def client
+    @client ||= Line::Bot::Client.new { |config|
+      config.channel_secret = Rails.application.credentials[:LINE_CHANNEL_SECRET]
+      config.channel_token = Rails.application.credentials[:LINE_CHANNEL_TOKEN]
+    }
   end
 
 end
