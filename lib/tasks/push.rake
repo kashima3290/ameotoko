@@ -15,6 +15,9 @@ namespace :push_line do
     unixtime = list["dt"]
     jst = Time.at(unixtime) # 日本時間に変更
     forecast[:hour] = jst.strftime("%H時") # 〜時で取得
+    if forecast[:hour][0...1] == "0" # 一桁の時間の0を削除
+      forecast[:hour][0...1] = ""
+    end
     forecast[:weather] = list["weather"][0]["description"] # 天気を取得
     forecasts << forecast
   end
