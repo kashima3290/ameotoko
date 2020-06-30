@@ -65,3 +65,4 @@ gem 'line-bot-api'
 gem 'dotenv-rails'
 gem 'foreman'
 gem 'gon'
+gem 'whenever', require: false
