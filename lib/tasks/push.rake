@@ -1,6 +1,6 @@
 namespace :push_line do
   desc "push_line"
-  task push_line_message: :environment do
+  task push_line_message_morning: :environment do
     message = {
       type: "text",
       text: "テスト"
