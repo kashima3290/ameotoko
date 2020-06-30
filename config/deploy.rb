@@ -4,6 +4,10 @@ lock '3.14.1'
 # デプロイするアプリケーション名
 set :application, 'ameotoko'
 
+# Capistranoでwhenever
+set :whenever_command, "bundle exec whenever"
+require "whenever/capistrano"
+
 # cloneするgitのレポジトリ
 set :repo_url, 'git@github.com:kashima3290/ameotoko.git'
 
