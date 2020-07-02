@@ -1,6 +1,7 @@
 namespace :push_line do
   desc "push_line"
   task push_line_message_morning: :environment do
+
     # 現在天気取得
     now_weather_uri = URI.parse("https://api.openweathermap.org/data/2.5/weather?q=Osaka-shi,jp&units=metric&lang=ja&APPID=#{Rails.application.credentials[:OPEN_WETHER_MAP_API]}")
     now_weather_response = Net::HTTP.get_response(now_weather_uri)
@@ -24,17 +25,21 @@ namespace :push_line do
       forecasts << forecast
     end
 
-    rainy = []
+    rains = []
     forecasts.each do |forecast|
       if forecast[:weather].include?("雨") == true # 雨があれば降る時間を保存
-        rainy << forecast
+        rains << forecast
       end
     end
 
-    if rainy.present?
+    weather_message = "\r\n"
+    if rains.present? # 雨が降る日は通知する
+      rains.each do |rain|
+        weather_message << "#{rain[:hour]}から#{rain[:weather]}\r\n"
+      end
       message = {
         type: "text",
-        text: "今日は雨降るぞ"
+        text: "今日は傘持ってけよ\r\n\ #{weather_message}"
       }
       client = Line::Bot::Client.new { |config|
         config.channel_secret = Rails.application.credentials[:LINE_CHANNEL_SECRET]
