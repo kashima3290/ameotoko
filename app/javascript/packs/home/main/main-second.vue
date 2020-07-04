@@ -1,7 +1,8 @@
 <template>
   <v-parallax
-    height="300"
-    src="https://lh3.googleusercontent.com/_utdRJsQDHnfVvuqFWoZEbz0v6RKxVYrvneyFt-Atpfe1NpzAZJPlDnhqQVgnvV2JTMgutBmUb_DDF2oPk3IP8e8RaS-UzzTriGuYyCesd8ygPtEmAsFoVBL6OE3-MMuomeoRxPvveGGwHt5ql1Xr12Ob852ZMTSAGWa-JoIA9GnKjEuFYJHNR-cinAWXLLzbNJAah3KwyCYabEz6pDLL2YfEjZz8SHtdWPpV0v5E6W5MX1lTRM-EDMMlUaRtUlBYzDe-BVpBFyZVpR4zOfnT0hcTuVHcJFQ8nU-6lUqb9mfGRiEWP4AHKBFys58fJei25zhTeT5wiYz9HaozAh039wL1YfU2phx-Cmnq-qy-NSK8vC94Sast7RVAjKz4lOizYL-Fi1D2AYIWurp_xPx71p1bIj6QI6m8D_3Pfs8QnsQViqfQwyEKYkrkP9u7fcO3pAQNaOXpIRzqKXK9RCs_YEAybfFIqV29SQ9vnzfbUfC0v8GzohXcE2zVJ75Lw0lNs34BSJyXX9nTyydeJyXfsdyY4k3HmVGiDrbu7aaYaM0djPkNO-CarS9uHtVYX4yX4ICGOeYoua5XmJ6LKMVwX75ZVNArAlvPYE83RnXSzyrjVfue6Nn6ojTevPYW4Jv9WWdmyemiOP-TB8N-3mI0LX3EAFKnoaO6OqXW-5f5eibj2Q2JuT_6RJBKp9P=w1920-h1200-no?authuser=0"
+    class="mt-15"
+    height="250"
+    src="https://lh3.googleusercontent.com/Cd4V-uagzPppwiUdFFc8Af5dijoWiIfpvphMcl91XzigIVChj3Vqdiw0XjdGsZ8rr8c-V7iYjSQAT26Uba1XhXV_s3Dkh590hYgj_z5rtgjopZF_53fEQMiHBPxbqnTFRKsuRkwOGPoGDZ9msaXh3MJ1Im_L6YupBeKDM-3rzUqCBaxspXnBJ97hoaCAlFOI03VIR6TMWJs3Br6uNvukUEI_6otK5RaW7Xr2Ezr_PboTb41Hb1kCHJOwl1EfGHDHmdDnYEc8b6TTGf8kHuMuZpuzaicaxm4fq4BiR3lmPzN8t20peWKrt16juHbeemUa-InQUKO-jqBXduCe7P3xaJqToOVFRHaerVvqjxD5y2Br8KJOpLxksmH5uPkdWVl5TOAFQYnJvJv8Qg6xBcFubsQ3m2kLqQh08g1EnZRpj-_pP60WhP6IWbIcD7I1lvyye8KskYlkTjQFGn-TVab5sqW9h5TvfLJ5g8yP8uCSPVfM12sbQcyKuoeCmjLY0SjsLRtmiNzDfcuOI-8a9XyykP2F6228W3GrJif_rTurZs5E83Sl3ACWXJWice7EVC0kb7yC95ztcLxYbag3ZP3npCjTXWsk3BJhAEg70pYhP4piMsIF-L6_1_aN8YB7uCFVTg7H6Rhu5RvcYtPZOTv5xKCNqblQqnee1LFmVbbhC2ESgsf8GpiFLDfd5olQ=w1920-h1280-no?authuser=0"
   >
     <v-row
       align="center"
@@ -15,9 +16,8 @@
 </template>
 
 <script>
-export default {
-
-}
+  export default {
+  }
 </script>
 
 <style>

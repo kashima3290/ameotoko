@@ -2,7 +2,7 @@
   <v-app-bar
     app
     dark
-    src="https://lh3.googleusercontent.com/pHmWBI58vUreJWPoq0KTLnydYmnoyXwUE0-RxR8gDKEr3ZHhH7qokDb0OI2YUh1WESkQEQQmBbEfDgWyj9yws519ncsp91HFjqDc8X5nOcEAeiPIFYdDEdBxwtM6T5eSWXv2g6jxVvsj0VlGhdoIaYLqr_d8Wy0zv43szMSs0_o-fuffnAUluAxqZBTQGwEQU12hSxbIy811-HVX5RiDITyXcn3w3IQyqotWUk_axGhk4kKgTHVvLRCD8qAEbHT8USXfdpEysq-NWj3dygaCk9KUNGCc-742RZLDY2pgQziffFz8qEDEmXtXzqyilsmi7zgWkXCLfzOlJOuVGkxJao5wXNtMwXcqKvlQD6N8lWSQyXbZFbDRqOHttBMKJSR_7ciiu6LIAJKp7H8L6ygVCMTNnNjVgRQHcutevLsnB8U6qiG3WCj7L3LHYDZ5CRcWt5kgNtxVDulCP5uI-zWZGr1d-wF19VczwGalOKJAubfc6nuTCKfLWtBtQ4AviqcPUQncd1yg07x0Rfktub4zZPlyN80fkztVyAyqqzslCUpieMLmbXgdX82km6DYQkSXfMWo1sKVEs1hy5eTJYRJjR_L8q9l3zD5ZZOtY-a7bCBGe5ECNhfG9TIzqh5M0PkXwlmVe1DtM9I1XhYMQ3V2OZ0HI65J9VfPrYUe9ZhFr1CgeuVh0c0bIfPGBWe5=w1920-h1280-no?authuser=0"
+    color="green"
   >
     <v-toolbar-title>LINE-Bot サーバー "雨男"</v-toolbar-title>
   </v-app-bar>

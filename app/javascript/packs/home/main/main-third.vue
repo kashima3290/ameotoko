@@ -19,22 +19,23 @@
       <v-card class="elevation-2">
         <v-card-title class="headline">Ver 2.0</v-card-title>
         <v-card-text>
-          休日の通知は不要との要望を受け、平日のみの通知に変更
+          comming soon...
+          <!-- 休日の通知は不要との要望を受け、平日のみの通知に変更 -->
         </v-card-text>
       </v-card>
     </v-timeline-item>
 
-    <v-timeline-item
+    <!-- <v-timeline-item
       color="blue"
       large
-    >
-      <v-card class="elevation-2">
+    > -->
+      <!-- <v-card class="elevation-2">
         <v-card-title class="headline">Ver 3.0</v-card-title>
         <v-card-text>
           comming soon...
         </v-card-text>
       </v-card>
-    </v-timeline-item>
+    </v-timeline-item> -->
 
   </v-timeline>
 </template>
