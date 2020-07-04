@@ -7,7 +7,7 @@ $worker  = 2
 #リクエストを受け取るポート番号を指定。後述
   $listen  = File.expand_path 'tmp/sockets/.unicorn.sock', $app_dir
 #PIDの管理ファイルディレクトリ
-  pid "#{app_shared_path}/tmp/pids/unicorn.pid"
+  $pid     = File.expand_path 'shared/tmp/pids/unicorn.pid', $app_dir
 #エラーログを吐き出すファイルのディレクトリ
   $std_log = File.expand_path 'log/unicorn.log', $app_dir
 
@@ -18,6 +18,7 @@ $worker  = 2
   stdout_path $std_log
   timeout $timeout
   listen  $listen
+  pid $pid
 
 #ホットデプロイをするかしないかを設定
   preload_app true
