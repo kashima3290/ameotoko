@@ -2,7 +2,7 @@
   <v-app>
     <bot-header></bot-header>
     <v-main>
-      <main-first></main-first>
+      <main-first class="mt-10 mb-15"></main-first>
       <main-second></main-second>
       <main-third></main-third>
     </v-main>
