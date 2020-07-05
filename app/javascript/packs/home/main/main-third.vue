@@ -9,6 +9,7 @@
         <v-card-text>
           友人の出勤時間に合わせて、毎朝定期的に天気情報を取得し、今後雨が降りそうなら通知してくれます。
         </v-card-text>
+        <img src='../../../../assets/images/ver1-1.png'>
       </v-card>
     </v-timeline-item>
 
@@ -39,3 +40,6 @@
 
   </v-timeline>
 </template>
+
+<script>
+</script>
