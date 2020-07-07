@@ -13,6 +13,8 @@
           <h2 class="mb-1">・Github</h2>
           <h1></h1>
           <a href='https://github.com/kashima3290/ameotoko'>ソースコードはこちらから</a>
+          <h1></h1>
+          <a href='https://github.com/kashima3290/ameotoko/blob/master/lib/tasks/push.rake'>毎朝のpush通知コードはこちらから</a>
         </v-card-text>
       </v-card>
     </v-col>
