@@ -13,17 +13,21 @@ class LinebotController < ApplicationController
     # メッセージカスタム
     events = client.parse_events_from(body)
     events.each { |event|
-      case event.message['text']
-      when '今日' then
-        responce = "今日の天気は"
-      else
-        response = "1週間先までの大阪の天気を予報するで"
-      end
-
       case event
       when Line::Bot::Event::Message
         case event.type
         when Line::Bot::Event::MessageType::Text
+          if event.message['text'].include?('今')
+            response = "今の天気"
+          elsif event.message['text'].include?('予報')
+            response = "天気予報"
+          else
+            response = "大阪に雨が降る日は、\r\n\
+                        毎朝7時に予報するよ\r\n\r\n\
+                        今の天気情報=>「今」\r\n\
+                        これからの天気予報=>「予報」
+                        "
+          end
           message = {
             type: 'text',
             text: response
