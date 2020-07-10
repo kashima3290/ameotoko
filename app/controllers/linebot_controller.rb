@@ -1,4 +1,5 @@
 class LinebotController < ApplicationController
+  include CommonActions
   require 'line/bot'
   require 'json'
   protect_from_forgery except: :callback
@@ -22,11 +23,7 @@ class LinebotController < ApplicationController
           elsif event.message['text'].include?('予報')
             response = "天気予報"
           else
-            response = "大阪に雨が降る日は、\r\n\
-                        毎朝7時に予報するよ\r\n\r\n\
-                        今の天気情報=>「今」\r\n\
-                        これからの天気予報=>「予報」
-                        "
+            response = "大阪に雨が降る日は、\r\n\毎朝7時に予報するよ\r\n\r\n\今の天気情報=>「今」\r\n\これからの天気予報=>「予報」"
           end
           message = {
             type: 'text',
