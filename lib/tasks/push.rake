@@ -1,6 +1,7 @@
 namespace :push_line do
   desc "push_line"
   task push_line_message_morning: :environment do
+    include WeatherJson
     # 土曜日と日曜日は通知しない
     unless Date.today.strftime("%A") == "Sunday" || Date.today.strftime("%A") == "Saturday"
 
