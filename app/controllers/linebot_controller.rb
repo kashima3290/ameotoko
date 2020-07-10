@@ -1,5 +1,7 @@
 class LinebotController < ApplicationController
   include WeatherJson
+  before_action :now_weather_json
+  before_action :forecast_json
   require 'line/bot'
   require 'json'
   protect_from_forgery except: :callback
