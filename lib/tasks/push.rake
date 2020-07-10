@@ -5,16 +5,11 @@ namespace :push_line do
     unless Date.today.strftime("%A") == "Sunday" || Date.today.strftime("%A") == "Saturday"
 
       # 現在天気取得
-      now_weather_uri = URI.parse("https://api.openweathermap.org/data/2.5/weather?q=Osaka-shi,jp&units=metric&lang=ja&APPID=#{Rails.application.credentials[:OPEN_WETHER_MAP_API]}")
-      now_weather_response = Net::HTTP.get_response(now_weather_uri)
-      now_weather_json = JSON.parse(now_weather_response.body)
+      include WeatherJson # now_weather_json・forecast_jsonをconcernから取得
       now_weather = now_weather_json["weather"][0]["description"]
 
       # 天気予報取得
       forecasts = []
-      forecast_uri = URI.parse("https://api.openweathermap.org/data/2.5/forecast?q=Osaka-shi,jp&units=metric&lang=ja&APPID=#{Rails.application.credentials[:OPEN_WETHER_MAP_API]}")
-      forecast_response = Net::HTTP.get_response(forecast_uri)
-      forecast_json = JSON.parse(forecast_response.body)
       forecast_json["list"][0..4].each do |list| # 21時まで3時間づつ予報を取得
         forecast = {}
         unixtime = list["dt"]

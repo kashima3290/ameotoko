@@ -7,7 +7,6 @@ module WeatherJson
   end
 
   def forecast_json
-    forecasts = []
     forecast_uri = URI.parse("https://api.openweathermap.org/data/2.5/forecast?q=Osaka-shi,jp&units=metric&lang=ja&APPID=#{Rails.application.credentials[:OPEN_WETHER_MAP_API]}")
     forecast_response = Net::HTTP.get_response(forecast_uri)
     forecast_json = JSON.parse(forecast_response.body)
