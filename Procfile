@@ -1,2 +1,2 @@
 rails: rails s --port=3000
-webpack: sh -c 'cd ameotoko_front/ && yarn serve'
+webpack: sh -c 'cd ameotoko_front/ && yarn serve --port=8080'
