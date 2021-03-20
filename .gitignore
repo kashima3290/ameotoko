@@ -35,3 +35,4 @@
 yarn-debug.log*
 .yarn-integrity
 /Procfile
+/ameotoko_front/.env
