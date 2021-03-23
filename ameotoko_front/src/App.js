@@ -5,25 +5,30 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import Login from "./views/pages/Login";
+import Login from "./components/pages/Login";
 
 export default function App() {
   return (
     <BrowserRouter>
-        <Switch>
-          <Route path="/Login">
-            <Login />
-          </Route>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/users">
-            <Users />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
+      <Switch>
+        <Route path="/Login">
+          <Login />
+        </Route>
+        <Route path="/about">
+          <About />
+        </Route>
+        <Route path="/users">
+          <Users />
+        </Route>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
+      <Link to="/">Back To Home</Link>
+      <br/>
+      <Link to="/Login">login</Link>
+      <br/>
+      <Link to="/about">about</Link>
     </BrowserRouter>
   );
 }
