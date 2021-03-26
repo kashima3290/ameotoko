@@ -6,10 +6,12 @@ import {
   Link
 } from "react-router-dom";
 import Login from "./components/pages/Login";
+import Header from "./components/organisms/Header";
 
 export default function App() {
   return (
     <BrowserRouter>
+      <Header />
       <Switch>
         <Route path="/Login">
           <Login />
