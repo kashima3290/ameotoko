@@ -7,11 +7,13 @@ import {
 } from "react-router-dom";
 import Login from "./components/pages/Login";
 import Header from "./components/organisms/Header";
+import AppLayout from "./components/templates/AppLayout";
 
 export default function App() {
   return (
     <BrowserRouter>
-      <Header />
+      {/* <Header /> */}
+      <AppLayout />
       <Switch>
         <Route path="/Login">
           <Login />
