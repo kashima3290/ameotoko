@@ -129,11 +129,12 @@ export default function AppLayout() {
           <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
             雨男
           </Typography>
-          <IconButton color="inherit">
+          {/* ヘッダーに右にボタン設置 */}
+          {/* <IconButton color="inherit">
             <Badge badgeContent={4} color="secondary">
               <NotificationsIcon />
             </Badge>
-          </IconButton>
+          </IconButton> */}
         </Toolbar>
       </AppBar>
       <Drawer
