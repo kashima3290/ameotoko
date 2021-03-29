@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
@@ -8,13 +9,17 @@ import MessageIcon from '@material-ui/icons/Message';
 
 export const mainListItems = (
   <div>
-    <ListItem button>
+    <ListItem button
+      component={Link}
+      to="/Weather">
       <ListItemIcon>
         <WbSunnyIcon />
       </ListItemIcon>
       <ListItemText primary="天気" />
     </ListItem>
-    <ListItem button>
+    <ListItem button
+      component={Link}
+      to="/LineConfig">
       <ListItemIcon>
         <MessageIcon />
       </ListItemIcon>
