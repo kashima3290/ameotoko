@@ -1,0 +1,2 @@
+class LineConfig < ApplicationRecord
+end
