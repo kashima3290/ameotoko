@@ -1,0 +1,2 @@
+class WeekWeatherNotification < ApplicationRecord
+end
