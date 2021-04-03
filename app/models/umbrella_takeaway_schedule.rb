@@ -1,0 +1,2 @@
+class UmbrellaTakeawaySchedule < ApplicationRecord
+end
