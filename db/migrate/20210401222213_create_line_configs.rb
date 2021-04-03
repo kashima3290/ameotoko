@@ -4,8 +4,8 @@ class CreateLineConfigs < ActiveRecord::Migration[6.0]
       t.references :user, null: false
       t.boolean :notification_flag, null: false
       t.string :place, null: false
-      t.boolean :weekly_weather_notification_schedule_flag, null: false
-      t.boolean :week_weather_notification_schedule_flag, null: false
+      t.boolean :weekly_weather_notification_flag, null: false
+      t.boolean :week_weather_notification_flag, null: false
       t.boolean :umbrella_takeaway_flag, null: false
       t.timestamps
     end
