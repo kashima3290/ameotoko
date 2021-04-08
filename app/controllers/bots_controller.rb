@@ -4,8 +4,8 @@ class BotsController < ApplicationController
 
   def index
     # 現在天気
-    now_weather = now_weather_json["weather"][0]["description"] # concernからjson取得
-    gon.now_weather = now_weather
+    @now_weather = now_weather_json["weather"][0]["description"]
+    render json: @now_weather
   end
 
 end
