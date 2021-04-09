@@ -1,7 +1,12 @@
-import React from "react";
+import React, { Component } from "react";
+// import axios from 'axios'
 
-export default function LineConfig() {
-  return (
-    <h1>LineConfig</h1>
-  );
+class LineConfig extends Component {
+  render() {
+    return (
+      <h1>LineConfig</h1>
+    );
+  }
 }
+
+export default LineConfig;

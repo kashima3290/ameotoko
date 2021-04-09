@@ -1,7 +1,12 @@
-import React from "react";
+import React, { Component } from "react";
+// import axios from 'axios'
 
-export default function Login() {
-  return (
-    <h1>Login</h1>
-  );
+class Login extends Component {
+  render() {
+    return (
+      <h1>Login</h1>
+    );
+  }
 }
+
+export default Login;
