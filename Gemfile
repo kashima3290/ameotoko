@@ -62,3 +62,4 @@ gem 'foreman'
 gem 'gon'
 gem 'whenever', require: false
 gem 'devise'
+gem 'rack-cors'
