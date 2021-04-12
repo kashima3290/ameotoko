@@ -38,8 +38,8 @@ module Ameotoko
       allow do
         origins Rails.application.credentials[:FRONT_DEV_HOST]
         resource "*",
-          headers: :any,
-          methods: [:get, :post, :options, :head]
+        headers: :any,
+        :methods => [:get, :post, :patch, :delete, :options]
       end
     end
   end
