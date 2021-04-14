@@ -12,8 +12,8 @@ class Weather extends Component {
   componentDidMount() {
     axios.get('http://localhost:3000/bots')
       .then(res => {
-        const persons = res.data;
-        this.setState({ persons });
+        const now_weather = res.data;
+        this.setState({ now_weather });
       })
   }
 
