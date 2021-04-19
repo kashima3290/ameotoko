@@ -10,7 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_26_225300) do
+ActiveRecord::Schema.define(version: 2021_04_03_005514) do
+
+  create_table "line_configs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.boolean "notification_flag", null: false
+    t.string "place", null: false
+    t.boolean "weekly_weather_notification_flag", null: false
+    t.boolean "week_weather_notification_flag", null: false
+    t.boolean "umbrella_takeaway_flag", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_line_configs_on_user_id"
+  end
+
+  create_table "umbrella_takeaway_schedules", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.bigint "line_config_id", null: false
+    t.time "notification_time", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["line_config_id"], name: "index_umbrella_takeaway_schedules_on_line_config_id"
+  end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name", default: "", null: false
@@ -25,6 +45,23 @@ ActiveRecord::Schema.define(version: 2021_02_26_225300) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+  create_table "week_weather_notification_schedules", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.bigint "line_config_id", null: false
+    t.integer "week_number", null: false
+    t.time "notification_time"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["line_config_id"], name: "index_week_weather_notification_schedules_on_line_config_id"
+  end
+
+  create_table "weekly_weather_notification_schedules", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.bigint "line_config_id", null: false
+    t.time "notification_time", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["line_config_id"], name: "index_weekly_weather_notification_schedules_on_line_config_id"
   end
 
 end

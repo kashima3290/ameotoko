@@ -33,5 +33,14 @@ module Ameotoko
     config.active_record.default_timezone = :local
     config.i18n.default_locale = :ja
     config.api_only = true
+    # フロントからのアクセスを許可
+    config.middleware.insert_before 0, Rack::Cors do
+      allow do
+        origins Rails.application.credentials[:FRONT_DEV_HOST]
+        resource "*",
+        headers: :any,
+        :methods => [:get, :post, :patch, :delete, :options]
+      end
+    end
   end
 end

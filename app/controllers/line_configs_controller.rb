@@ -1,0 +1,2 @@
+class LineConfigsController < ApplicationController
+end
