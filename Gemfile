@@ -62,4 +62,7 @@ gem 'foreman'
 gem 'gon'
 gem 'whenever', require: false
 gem 'devise'
-gem 'rack-cors'
+gem 'devise_token_auth' # devise をAPIとして使用するために必要
+gem 'devise-i18n' # devise 多言語対応
+gem 'rails-i18n' # devise
+gem 'rack-cors' # CORS通信許可
