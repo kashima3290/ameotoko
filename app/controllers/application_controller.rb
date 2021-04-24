@@ -1,4 +1,3 @@
 class ApplicationController < ActionController::API
-        include DeviseTokenAuth::Concerns::SetUserByToken
-  # before_action :authenticate_user! # 前画面ログイン必須
+  include DeviseTokenAuth::Concerns::SetUserByTokenx
 end
