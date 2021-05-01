@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   post '/callback' => 'linebot#callback'
   root 'bots#index'
   resources :bots
+  resources :weathers, only:[:index]
+  resources :line_configs, only: [:index]
 end
