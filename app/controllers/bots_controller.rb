@@ -1,5 +1,5 @@
 class BotsController < ApplicationController
-  include WeatherJson
+  include OpenWeatherMapApi
   before_action :now_weather_json
 
   def index
