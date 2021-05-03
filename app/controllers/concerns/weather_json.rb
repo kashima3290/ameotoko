@@ -11,5 +11,4 @@ module WeatherJson
     forecast_response = Net::HTTP.get_response(forecast_uri)
     forecast_json = JSON.parse(forecast_response.body)
   end
-
 end
