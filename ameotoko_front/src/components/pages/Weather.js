@@ -10,7 +10,7 @@ class Weather extends Component {
   }
 
   componentDidMount() {
-    axios.get(process.env.REACT_APP_DEV_RAILS_API_URI)
+    axios.get(process.env.REACT_APP_DEV_RAILS_API_URI + "/weathers")
       .then(res => {
         const now_weather = res.data;
         this.setState({ now_weather });
