@@ -1,4 +1,5 @@
 class WeathersController < ApplicationController
+  before_action :authenticate_user!
   include OpenWeatherMapApi
   before_action :now_weather_json
 
