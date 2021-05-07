@@ -11,10 +11,26 @@ class Weather extends Component {
 
   componentDidMount() {
     axios.get(process.env.REACT_APP_DEV_RAILS_API_URI + "/weathers")
-      .then(res => {
-        const now_weather = res.data;
-        this.setState({ now_weather });
-      })
+    .then(res => {
+      const now_weather = res.data;
+      this.setState({ now_weather });
+    })
+    .catch((error) => {
+      if (error.response) {
+          // エラーが返却された場合
+          console.log(error.response.data);
+          console.log(error.response.status);
+          console.log(error.response.headers);
+        } else if (error.request) {
+          // リクエストは行われましたが、レスポンスは受信しなかった場合
+          // `error.request`は、ブラウザのXMLHttpRequestのインスタンスであり、Node.jsのhttp.ClientRequestのインスタンス
+          console.log(error.request);
+        } else {
+          // 予期しないエラーが発生した場合
+          console.log('Error', error.message);
+        }
+      }
+    )
   }
 
   render() {
