@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from 'axios'
+import { useHistory } from "react-router-dom";
 
 class Weather extends Component {
   constructor(props) {
@@ -22,6 +23,7 @@ class Weather extends Component {
           // 401 認証エラー
           if (error.response.status == 401){
             console.log("401 error");
+            window.location = '/Login';
           }
           // console.log(error.response.data); // エラー文（devise）
           // console.log(error.response.headers); // エラー詳細
