@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
-import Error from "../functions/error"
+import { errorHandle } from "../functions/errorHandle"
 
 class Weather extends Component {
   constructor(props) {
@@ -19,13 +19,11 @@ class Weather extends Component {
     })
     // エラーハンドリング
     .catch((error) => {
+      errorHandle(error.response);
       if (error.response) {
           // エラーが返却された場合
           // 401 認証エラー
           if (error.response.status == 401){
-            let error = new Error;
-            error.getRequest();
-            console.log("401 error");
             // window.location = "/Login";
           }
           // console.log(error.response.data); // エラー文（devise）
