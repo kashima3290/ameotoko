@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import axios from "axios";
-import { useHistory } from "react-router-dom";
 import { errorHandle } from "../functions/errorHandle"
 
 class Weather extends Component {
@@ -11,7 +10,7 @@ class Weather extends Component {
     };
   }
 
-  componentWillMount() {
+  componentDidMount() {
     axios.get(process.env.REACT_APP_DEV_RAILS_API_URI + "/weathers")
     .then(res => {
       const now_weather = res.data;
@@ -22,6 +21,15 @@ class Weather extends Component {
       errorHandle(error);
       }
     )
+  }
+
+  shouldComponentUpdate() {
+    if(this.state.update) {
+      return true;
+    }
+    else {
+      return false;
+    }
   }
 
   render() {
