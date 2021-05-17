@@ -19,23 +19,7 @@ class Weather extends Component {
     })
     // エラーハンドリング
     .catch((error) => {
-      errorHandle(error.response);
-      if (error.response) {
-          // エラーが返却された場合
-          // 401 認証エラー
-          if (error.response.status == 401){
-            // window.location = "/Login";
-          }
-          // console.log(error.response.data); // エラー文（devise）
-          // console.log(error.response.headers); // エラー詳細
-        } else if (error.request) {
-          // リクエストは行われましたが、レスポンスは受信しなかった場合
-          // `error.request`は、ブラウザのXMLHttpRequestのインスタンスであり、Node.jsのhttp.ClientRequestのインスタンス
-          console.log(error.request);
-        } else {
-          // 予期しないエラーが発生した場合
-          console.log("Error", error.message);
-        }
+      errorHandle(error);
       }
     )
   }
