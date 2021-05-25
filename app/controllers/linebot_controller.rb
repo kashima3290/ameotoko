@@ -1,5 +1,5 @@
 class LinebotController < ApplicationController
-  include WeatherJson
+  include OpenWeatherMapApi
   before_action :now_weather_json
   before_action :forecast_json
   require 'line/bot'

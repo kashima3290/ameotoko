@@ -1,3 +1,4 @@
 class ApplicationController < ActionController::API
-  # before_action :authenticate_user! # 前画面ログイン必須
+  include DeviseTokenAuth::Concerns::SetUserByToken
+  skip_before_action :verify_authenticity_token, if: :devise_controller? # APIではCSRFチェックをしない
 end
